@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Earth Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Earth Facts</h1>
+        <button id="factButton">Show Random Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Earth is a bit of a cosmic oddity. Its tilted axis means we experience seasons.",
+            "The deepest point in the ocean isn't a pit but a trench. The Mariana Trench goes down nearly 11 kilometers deep!",
+            "Earth is constantly moving and changing. It wobbles slightly on its axis.",
+            "Our planet's magnetic field protects us from solar winds.",
+            "The Earth is home to more than 8 million known species!",
+            "Earth is a bit of an ancient planet. Its rocks are over 4 billion years old!",
+            "There's more water on Earth than any other place in the solar system.",
+            "The largest volcano on Earth is actually underwater! Mauna Loa in Hawaii is a giant shield volcano.",
+            "Our planet has two 'moon' systems.",
+            "Earth spins incredibly fast compared to other planets."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
